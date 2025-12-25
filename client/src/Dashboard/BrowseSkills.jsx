@@ -99,7 +99,7 @@ const BrowseSkills = () => {
           >
             <div className="text-3xl mb-2">{cat.icon}</div>
             <h3 className="font-semibold text-gray-800">{cat.name}</h3>
-            <p className="text-sm text-gray-500">{cat.count} skills</p>
+            <p className="text-sm text-gray-600">{cat.count} skills</p>
           </div>
         ))}
       </div>

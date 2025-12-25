@@ -61,7 +61,7 @@ export default function DashboardWelcome() {
   return (
     <div className="p-6 space-y-8">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white rounded-2xl p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-600 text-white rounded-2xl p-6 shadow-lg">
         <h1 className="text-2xl md:text-3xl font-bold">Welcome, {loggedInUser?.name}!</h1>
         <p className="mt-1 text-sm text-blue-100">Discover new skills and connect with amazing learners.</p>
       </div>
