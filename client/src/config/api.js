@@ -1,9 +1,9 @@
 // API configuration
-// Production Backend URL: https://skillswapstartup-xu7x.onrender.com
+// Production Backend URL: https://skillswapstartup-1.onrender.com
 // Production Frontend URL: https://skill-swap-startup.vercel.app
 
 // Socket.IO URL - connects to production backend by default
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || 'https://skillswapstartup-xu7x.onrender.com';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || 'https://skillswapstartup-1.onrender.com';
 
 // API Base URL - used for direct API calls if needed
 // In development, vite proxy handles /api/* requests
