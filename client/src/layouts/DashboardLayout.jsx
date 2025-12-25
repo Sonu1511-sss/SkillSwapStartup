@@ -9,6 +9,7 @@ import io from "socket.io-client";
 import { toast } from 'react-hot-toast';
 import Chatbot from '../components/Chatbot'; 
 import { MessageCircle } from 'lucide-react';
+import { SOCKET_URL } from '../config/api';
 
 function DashboardLayout() {
     const { user, fetchUnreadRequestCount , fetchUnreadCount  } = useContext(AuthContext);
@@ -16,7 +17,7 @@ function DashboardLayout() {
 
     useEffect(() => {
         if (user) {
-            const socket = io("https://skillswap-startup-vi6l.vercel.app", { query: { userId: user.id } });
+            const socket = io(SOCKET_URL, { query: { userId: user.id } });
             
             // Listen for the new swap request event from the server
             socket.on("newSwapRequest", (data) => {

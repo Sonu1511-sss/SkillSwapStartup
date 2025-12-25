@@ -7,6 +7,7 @@ import { AuthContext } from "../context/AuthContext";
 import io from "socket.io-client";
 import { format, formatDistanceToNow, isToday } from 'date-fns';
 import { useLocation, useNavigate } from "react-router-dom";
+import { SOCKET_URL } from "../config/api";
 
 export default function Messages() {
   const [conversations, setConversations] = useState([]);
@@ -27,7 +28,7 @@ export default function Messages() {
   //----------------------------- Establish Socket.IO connection and set up listeners----------------------------------
   useEffect(() => {
     if (loggedInUser && activeChat) {
-      socket.current = io("https://skillswap-startup-vi6l.vercel.app", { query: { userId: loggedInUser.id } });
+      socket.current = io(SOCKET_URL, { query: { userId: loggedInUser.id } });
 
       socket.current.on("newMessage", (newMessage) => {
         if (newMessage.conversationId === activeChat._id) {

@@ -6,10 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // This will now correctly forward requests like /auth/signup to your backend
+      // Proxy API requests to backend in development
+      // In production, Vercel will use environment variable VITE_API_URL
       "/api": {
-        target: "https://skillswapstartup.onrender.com",
+        target: process.env.VITE_API_URL || "https://skillswapstartup-xu7x.onrender.com",
         changeOrigin: true,
+        secure: true,
       },
     },
   },

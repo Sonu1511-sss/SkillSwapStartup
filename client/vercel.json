@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://skillswapstartup-xu7x.onrender.com/api/:path*"
+    }
+  ]
+}
+

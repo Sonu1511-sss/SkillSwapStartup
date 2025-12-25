@@ -28,9 +28,8 @@ const httpServer = createServer(app);
 
 // --- Allowed Origins for CORS ---
 const allowedOrigins = [
-  "https://skillswap-indol.vercel.app",
-  "https://skillswapstartup.onrender.com",
-  "http://localhost:5173", // (optional for local testing)
+  "https://skill-swap-startup.vercel.app",
+  process.env.FRONTEND_URL || "http://localhost:5173", // Allow environment variable override for local testing
 ];
 
 
